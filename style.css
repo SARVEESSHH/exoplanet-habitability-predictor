@@ -1,1 +1,178 @@
+/* =========================
+   🌌 GLOBAL
+========================= */
 
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(
+        to bottom,
+        #020617,
+        #081529,
+        #0d1b36
+    );
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ✨ STAR FIELD
+========================= */
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    opacity: 0.15;
+
+    z-index: -2;
+}
+
+/* =========================
+   🚀 HEADER
+========================= */
+
+.topbar {
+
+    text-align: center;
+
+    padding: 30px;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00b4ff,
+            #6a5cff
+        );
+
+    box-shadow:
+        0 0 30px rgba(0,180,255,0.5);
+}
+
+/* =========================
+   📊 GRID
+========================= */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 25px;
+
+    padding: 30px;
+}
+
+/* =========================
+   🛰️ CARDS
+========================= */
+
+.card {
+
+    background:
+        rgba(15, 23, 42, 0.9);
+
+    border:
+        1px solid rgba(0,180,255,0.25);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(0,180,255,0.3);
+}
+
+/* =========================
+   📌 TITLES
+========================= */
+
+.card h2 {
+
+    margin-top: 0;
+
+    color: #6ecbff;
+
+    border-bottom:
+        1px solid rgba(110,203,255,0.25);
+
+    padding-bottom: 10px;
+}
+
+/* =========================
+   🖼️ IMAGES
+========================= */
+
+.card img {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+}
+
+/* =========================
+   🧠 WIDE SECTIONS
+========================= */
+
+.wide {
+
+    grid-column: span 2;
+}
+
+/* =========================
+   📋 TEXT
+========================= */
+
+.card p,
+.card li {
+
+    line-height: 1.7;
+}
+
+ul {
+
+    padding-left: 20px;
+}
+
+/* =========================
+   📱 MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .wide{
+        grid-column: span 1;
+    }
+
+    .topbar{
+        font-size:22px;
+    }
+}
